@@ -12,7 +12,8 @@ export default class CoordinatesButton extends Component {
     const x = event.clientX;
     const y = event.clientY;
     coordinatesArray.push(x, y);
-    this.props.onReceiveCoordinates(coordinatesArray);
+    const destructuredArray = [...coordinatesArray];
+    this.props.onReceiveCoordinates(destructuredArray);
   };
 
   render() {
